@@ -1,0 +1,25 @@
+{
+  "name": "NFT_Temple",
+  "version": "1.7.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "npm-fetch": "^0.0.9"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": ""
+  },
+  "keywords": [
+    "script from web"
+  ],
+  "author": "V",
+  "license": "Apache License 2.0",
+  "description": ""
+}

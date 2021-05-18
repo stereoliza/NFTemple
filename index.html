@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NFTemple</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.js"></script>
+    <script src="components/door.js"></script>
+    <script src="components/nft.js"></script>
+    <script src="components/lobby_door.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: black"
+             cursor="rayOrigin: mouse; fuse: false"
+             raycaster="objects: .raycastable"
+             environment>
+        <a-assets>
+            <a-asset-item id="colonna_obj" src="https://storageapi.fleek.co/stereoliza-team-bucket/assets/temple_colonna.obj"></a-asset-item>
+            <a-asset-item id="roof_obj" src="https://storageapi.fleek.co/stereoliza-team-bucket/assets/roof_final.obj"></a-asset-item>
+            <a-asset-item id="frame_obj" src="https://storageapi.fleek.co/stereoliza-team-bucket/assets/frame2_0.obj"></a-asset-item>
+            <a-asset-item id="door_obj" src="https://storageapi.fleek.co/stereoliza-team-bucket/assets/door.obj"></a-asset-item>
+
+            <a-asset-item id="pedestal_obj" src="https://storageapi.fleek.co/stereoliza-team-bucket/assets/pedestal.obj"></a-asset-item>
+            <a-asset-item id="pedestal_stand_obj" src="https://storageapi.fleek.co/stereoliza-team-bucket/assets/holo_pedestal.obj"></a-asset-item>
+            <a-asset-item id="hologram_light_obj" src="https://storageapi.fleek.co/stereoliza-team-bucket/assets/hologram_light.obj"></a-asset-item>
+            <a-asset-item id="switch_base_obj" src="https://storageapi.fleek.co/stereoliza-team-bucket/assets/switch_base.obj"></a-asset-item>
+            <a-asset-item id="switch_obj" src="https://storageapi.fleek.co/stereoliza-team-bucket/assets/switch.obj"></a-asset-item>
+
+        </a-assets>
+
+        <a-entity id="slots">
+
+            <a-entity id="1LeftSlot" class="slot"  obj-model="obj: #door_obj" position="-6.408 -0.176 -2.287" rotation="-85.69 70.333 -69.32"
+                      material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200"
+                      animation="property: position; dir: alternate; dur: 3400.000; from: -6.408 -0.173 -2.287; to: -6.408 -0.5 -2.287;loop:true">
+                <a-door class="raycastable menu-button" position= "0.32 0 2.3" rotation="0 87 90" scale = "2.1 2.88"></a-door>
+            </a-entity>
+
+            <a-entity  id="2LDoor" class="slot" obj-model="obj: #door_obj" position="-6.408 -0.176 -6.983" rotation="-85.69 70.333 -69.32"
+                      material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200"
+                      animation="property: position; dir: alternate; dur: 3200.000; from: -6.408 -0.176 -6.983; to: -6.408 -0.4 -6.983;loop:true">
+                <a-door class="raycastable menu-button" position= "0.32 0 2.3" rotation="0 87 90" scale = "2.1 2.88" ></a-door>
+            </a-entity>
+
+            <a-entity  id="3LDoor" class="slot" obj-model="obj: #door_obj" position="-6.408 -0.176 -11.651" rotation="-85.69 70.333 -69.32"
+                      material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200"
+                      animation="property: position; dir: alternate; dur: 3800.000; from: -6.408 -0.176 -11.651; to: -6.408 -0.38 -11.651; loop: true">
+                <a-door class="raycastable menu-button" position= "0.32 0 2.3" rotation="0 87 90" scale = "2.1 2.88"></a-door>
+            </a-entity>
+
+            <a-entity  id="1RDoor" class="slot" obj-model="obj: #door_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200"
+                      position="6.408 -0.176 -2.287" rotation="-83.97 -93.32 -86.03"
+                      animation="property: position; dir: alternate; dur: 3500.000; from: 6.408 -0.176 -2.287; to: 6.408 0.2 -2.287; loop: true">
+                <a-door class="raycastable menu-button" position= "0.32 0 2.3" rotation="0 87 90" scale = "2.1 2.88"></a-door>
+            </a-entity>
+
+            <a-entity  id="2RDoor" class="slot" obj-model="obj: #door_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200"
+                      position="6.408 -0.176 -6.983" rotation="-83.97 -93.32 -86.03"
+                      animation="property: position; dir: alternate; dur: 3800.000; from: 6.408 -0.176 -6.983; to: 6.408 0.3 -6.983; loop: true">
+                <a-door class="raycastable menu-button" position= "0.32 0 2.3" rotation="0 87 90" scale = "2.1 2.88"></a-door>
+            </a-entity>
+
+            <a-entity  id="3RDoor" class="slot" obj-model="obj: #door_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200"
+                      position="6.408 -0.176 -11.651" rotation="-83.97 -93.32 -86.03"
+                      animation="property: position; dir: alternate; dur: 3300.000; from: 6.408 -0.170 -11.651; to: 6.408 0.1 -11.651; loop: true">
+                <a-door class="raycastable menu-button" position= "0.32 0 2.3" rotation="0 87 90" scale = "2.1 2.88"></a-door>
+            </a-entity>
+
+            <a-entity  id="BRDoor" class="slot" obj-model="obj: #door_obj" material="color:#38ff14;emissive:#000000;emissiveIntensity:5;metalness:1;flatShading:true"
+                      position="4.253 -0.087 -14.644" rotation="-84.239 -4.506 -84.448"
+                      animation="property: position; dir: alternate; dur: 3600.000; from: 4.253 -0.097 -14.644; to: 4.253 0.3 -14.644; loop: true; ">
+                <a-door class="raycastable menu-button" position= "0.32 0 2.3" rotation="0 87 90" scale = "2.1 2.88"></a-door>
+            </a-entity>
+
+            <a-entity  id="BCDoor" class="slot" obj-model="obj: #door_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200"
+                      position="0 -0.087 -14.644" rotation="-84.239 -4.506 -84.448"
+                      animation="property: position; dir: alternate; dur: 3000.000; from: 0 -0.087 -14.644; to: 0 0.1 -14.644; loop: true;">
+                <a-door class="raycastable menu-button" position= "0.32 0 2.3" rotation="0 87 90" scale = "2.1 2.88"></a-door>
+            </a-entity>
+
+            <a-entity id="BLDoor" class="slot" obj-model="obj: #door_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200"
+                      position="-4.253 -0.087 -14.644" rotation="-84.239 -4.506 -84.448"
+                      animation="property: position; dir: alternate; dur: 3400.000; from: -4.253 -0.087 -14.644; to: -4.253 0.2 -14.644; loop: true;">
+                <a-door class="raycastable menu-button" position= "0.32 0 2.3" rotation="0 82 90" scale = "2.1 2.88"></a-door>
+            </a-entity>
+        </a-entity>
+
+        <a-entity id="temple">
+
+            <a-plane id="floor" src = "https://storageapi.fleek.co/stereoliza-team-bucket/assets/floor.jpg" material="blending:none;shader:flat" position="0.2 -0.106 -6.934" rotation="-89.779 178.462 -178.129" scale="16.244 17.252 4.949" ></a-plane>
+            <a-entity id="roof" obj-model="obj: #roof_obj ; mtl: " material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="-0.397 -4.302 -7.103" rotation="-89.36 -164.0 73.275" scale="1.864 1.659 1"></a-entity>
+
+            <a-entity id="colonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="-4.162 -0.176 1" rotation="-87.016 -9.231 95.648" scale="1 1 1.356"></a-entity>
+            <a-entity id="2colonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="4.162 -0.176 1" rotation="-85.865 -8.624 99.518" scale="1 1 1.356"></a-entity>
+            <a-entity id="3colonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="2.162 -0.176 1" rotation="-85.865 -8.624 99.518" scale="1 1 1.356"></a-entity>
+            <a-entity id="4colonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="-2.162 -0.176 1" rotation="-87.016 -9.231 95.648" scale="1 1 1.356"></a-entity>
+
+            <a-entity id="1Rcolonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="6.408 -0.176 0" rotation="-87.070 84.564 93.901" scale="1 1 1.356"></a-entity>
+            <a-entity id="2Rcolonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="6.408 -0.176 -4.507" rotation="-87.070 84.564 93.901" scale="1 1 1.356"></a-entity>
+            <a-entity id="3Rcolonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="6.408 -0.176 -9.210" rotation="-87.070 84.564 93.901" scale="1 1 1.356"></a-entity>
+            <a-entity id="4Rcolonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="6.408 -0.176 -13.853" rotation="-87.070 84.564 93.901" scale="1 1 1.356"></a-entity>
+
+            <a-entity id="1Lcolonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="-6.408 -0.176 0" rotation="-87.447 -99.800 95.487" scale="1 1 1.356"></a-entity>
+            <a-entity id="2Lcolonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="-6.408 -0.176 -4.507" rotation="-87.447 -99.800 95.487" scale="1 1 1.356"></a-entity>
+            <a-entity id="3Lcolonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="-6.408 -0.176 -9.210" rotation="-87.447 -99.800 95.487" scale="1 1 1.356"></a-entity>
+            <a-entity id="4Lcolonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="-6.408 -0.176 -13.853" rotation="-87.447 -99.800 95.487" scale="1 1 1.356"></a-entity>
+
+            <a-entity id="BLcolonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="-2.162 -0.176 -14.89" rotation="-87.016 -9.231 95.648" scale="1 1 1.356 "></a-entity>
+            <a-entity id="BRcolonna" obj-model="obj: #colonna_obj" material="color:#39ff14;emissive:#000000;emissiveIntensity:5.000;flatShading:true;metalness:0.5;roughness:0.200" position="2.162 -0.176 -14.89" rotation="-85.865 -8.624 99.518" scale="1 1 1.356"></a-entity>
+        </a-entity>
+
+        <a-entity id="Light" light="intensity:2" position="5.340 8.262 15.574" rotation="-85.86 -8.624 99.518" scale="5.099 5.450 3.091"></a-entity>
+        <a-entity id="2Light" light="intensity:2" position="-0.178 -3.477 -8.157" rotation="-37.183 -0.779 91.387"></a-entity>
+
+        <a-entity
+                position="0 1.6 0"
+                camera look-controls="magicWindowTrackingEnabled: false; touchEnabled: false; mouseEnabled: true"
+                camera wasd-controls="">
+        </a-entity>
+        <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
+    </a-scene>
+</body>
+</html>
