@@ -11,8 +11,9 @@ function saveLink() {
 
         }
         i = i - 1;
-    }
 
+    }
+    window.open('room.html', '_blank');
 }
 let count = 1;
 function addItem() {
