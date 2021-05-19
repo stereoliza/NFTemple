@@ -1,0 +1,51 @@
+body {
+  background: linear-gradient(to left, SpringGreen, white, orchid);
+}
+
+#firstP {
+font-family: "Montserrat", sans-serif;
+font-size: 40px;
+letter-spacing: 8px;
+line-height: 60px;
+padding-left: 32%;
+padding-top: 25px;
+}
+
+#secondP {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 3px;
+  padding-left: 36%;
+  padding-top: 125px;
+}
+
+.examplesList {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 4px;
+  padding-left: 45%;
+  padding-top: 50px;
+  line-height: 40px;
+}
+
+#userInput {
+  font-size: 40px;
+  padding: 10px;
+  margin-left: 29%;
+  width: 550px;
+}
+
+
+#sub {
+border-radius: 6px;
+background-color: black;
+color: white;
+font-size: 20px;
+padding: 20px;
+width: 220px;
+margin-top:100px;
+margin-left: -28%;
+position: absolute;
+}
