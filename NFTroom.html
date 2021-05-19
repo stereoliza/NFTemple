@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NFTemple</title>
+    <script src = "/components/script.js" type = "text/javascript"/></script>
+
+<style></style>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="./NFTroom.css">
+
+    <script>function saveLink() {
+    let links = document.getElementsByClassName("link");
+    let i =   links.length - 1;
+
+    while (i >= 0){
+        let checkbox = links.item(i).getElementsByTagName("input").item(0).checked;
+        if (checkbox == true){
+            let link = links.item(i).getElementsByTagName("input").item(1).value;
+            let k = links.item(i).getElementsByTagName("input").item(0).name;
+            sessionStorage.setItem(k, link);
+
+        }
+        i = i - 1;
+
+    }
+    window.open('room.html', '_blank');
+}
+let count = 1;
+function addItem() {
+
+    let check = document.createElement("input");
+    check.type = "checkbox";
+    check.name = "item"+count;
+    check.value = "0";
+
+    var textnode = document.createTextNode("IPFS Item:");
+
+    let input = document.createElement("input");
+    input.type = "text";
+    input.value = "val";
+
+    let form = document.createElement("form");
+    form.onclick = "saveLink()";
+    form.className = "link";
+
+    form.appendChild(check);
+    form.appendChild(textnode);
+    form.appendChild(input);
+
+    document.getElementById("list").appendChild(form);
+
+    count += 1;
+}
+    </script>
+
+
+    <ul id="list">
+            <form class="link">
+                <input type="checkbox" name="music" >IPFS Music:
+                <input type="text" value="music"><br>
+            </form>
+
+            <form class="link">
+                <input type="checkbox" name="sky">IPFS Sky:
+                <input type="text" value="sky"><br>
+            </form>
+
+            <form class="link">
+                <input type="checkbox" name="walls">IPFS Walls:
+                <input type="text" value="walls"><br>
+            </form>
+
+
+            <form class="link">
+                <input type="checkbox" name="floor">IPFS Floor:
+                <input type="text" value="floor"><br>
+            </form>
+
+            <form class="link">
+                <input type="checkbox" name="item" >IPFS item:
+                <input type="text" id="item" value="item"><br>
+
+            </form>
+
+    </ul>
+
+
+    <button type="button" id="Plus" onclick="addItem()">+</button>
+    <p>
+
+    </p>
+
+    <button  type="button" id="sub" onclick="saveLink()" <span></span> >Submit</button>
+
+  
+
+
+</body>
+</html>
