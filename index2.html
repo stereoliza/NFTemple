@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter ETH adress:</p>
+
+<form id="form" action="room.html">
+    <input  type="text" id="userInput" />
+    <input type="submit" onclick="myFunction1();" />
+</form>
+
+<p>Or chech out those samples:<p>
+    <ul>
+        <li>
+             <a href="room.html" onclick="myFunction2('0xc6b0562605d35ee710138402b878ffe6f2e23807')">Beeple</a>
+        </li>
+        <li>
+            <a href="room.html" onclick="myFunction2('0x795fb0e902f9e0fe87dab5a9dac37ad7c5bede0a')">LilJon</a>
+        </li>
+        <li>
+            <a href="room.html" onclick="myFunction2('0x1a7759dfa6bc62d8a4905e8c7f936e543026ccce')">Random Dude</a>
+        </li>
+    <li>
+        <a href="room.html" onclick="myFunction2('0x267a7ba3432db1f18d52b8776e2ba0e574091c3b')">ernest0</a>
+    </li>
+    <li>
+        <a href="room.html" onclick="myFunction2('0x6b32ae7f5db70749543ce0cd4932abbc501a7f6f')">Mkimbs</a>
+    </li>
+    <li>
+        <a href="room.html" onclick="myFunction2('0xc24f574d6853f6f6a31c19d468a8c1b3f31c0e54')">shilpixels</a>
+    </li>
+    </ul>
+
+<script>
+    function myFunction1() {
+
+        var input = document.getElementById("userInput").value;
+        sessionStorage.setItem('input', input);
+
+    }
+    function myFunction2(address) {
+
+        sessionStorage.setItem('input', address);
+        console.log('asd')
+
+    }
+</script>
+
+</body>
+</html>
