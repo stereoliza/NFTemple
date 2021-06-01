@@ -12,34 +12,30 @@ font-family: "Montserrat", sans-serif;
 font-size: 40px;
 letter-spacing: 8px;
 line-height: 60px;
-padding-left: 32%;
 padding-top: 25px;
+text-align: center;
 }
 
-#secondP {
-  font-family: "Montserrat", sans-serif;
-  font-weight: lighter;
-  font-size: 20px;
-  letter-spacing: 3px;
-  padding-left: 36%;
-  padding-top: 125px;
-}
 
 .examplesList {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 25px;
+  line-height: 50px;
+  font-size: 30px;
   letter-spacing: 4px;
-  padding-left: 45%;
-  padding-top: 50px;
-  line-height: 40px;
+  text-align: left;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  margin-right: 300px;
+  margin-left: 40%;
 }
 
-#userInput {
+input {
   font-size: 40px;
   padding: 10px;
-  margin-left: 29%;
+  margin-left: 30%;
   width: 550px;
+  text-align: center;
 }
 
 
@@ -58,11 +54,51 @@ position: absolute;
 a {
   color: DarkSlateGrey;
 }
+
+.basic {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 33px;
+  letter-spacing: 1px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 300px;
+  margin-left: 300px;
+  border: 3px black solid;
+  padding: 100px;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  font-size: 45px;
+  letter-spacing: 3px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: 150px;
+  padding-left: 320px;
+  padding-bottom: 100px;
+  padding-right: 320px;
+  text-align: center;
+}
+
+.small {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin: 100px;
+  padding-top: 200px;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: center;
+}
+
 </style>
-<h> Wellcome to the NFTemple. The Temple where your NFT got another demension.</h>
-<p> With a power of blockchain you can create 3d gallery full of your NFTs. Just with couple of clicks.</p>
-<p>If you already have tokens in your ETH wallet scroll down, enter your address and look at it by yourself. And yes we don't need your private key and we don't collect, trade or steal any data.
-In fact we even don't store anything and sorry no coockies for you today. =) </p>
+<h1> Welcome to the NFTemple. The Temple where your NFT got another demension.</h1>
+<p class="basic"> With a power of blockchain you can create 3D gallery full of your NFTs. Just with a couple of clicks.</p>
+<p class="basic">If you already have tokens in your ETH wallet scroll down, enter your address and look at it by yourself. And no, we don't need your private key and we don't trade or steal any data.
+In fact we even don't store anything. =) </p>
 
 <p id="firstP">Enter ETH adress:</p>
 
@@ -71,9 +107,8 @@ In fact we even don't store anything and sorry no coockies for you today. =) </p
     <input type="submit" id="sub" onclick="myFunction1();" />
 </form>
 
-<p>  If by any chance you still have no ETH address with tokens feel free to use any artist's addresses like those guys:</p>
+<p class="small">  If by any chance you still don't have ETH address with tokens feel free to use any artist's addresses like those guys:</p>
 
-<p id="secondP" >Or check out those samples:<p>
 <ul class="examplesList">
     <li>
         <a href="room.html" onclick="myFunction2('0xc6b0562605d35ee710138402b878ffe6f2e23807')">Beeple</a>
@@ -97,7 +132,7 @@ In fact we even don't store anything and sorry no coockies for you today. =) </p
 
 
 
-</p> UPCOMMING:
+<p class="basic"> UPCOMING:
 with couple more of clicks it will become an NFTemple token with it's own address on ENS. </p>
 
 
