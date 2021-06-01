@@ -9,10 +9,12 @@ body {
 
 #firstP {
 font-family: "Montserrat", sans-serif;
-font-size: 40px;
-letter-spacing: 8px;
-line-height: 60px;
+font-size: 30px;
+letter-spacing: 11px;
+line-height: 40px;
 padding-top: 25px;
+margin: 100px auto;
+max-width: 800px;
 text-align: center;
 }
 
@@ -24,31 +26,30 @@ text-align: center;
   font-size: 30px;
   letter-spacing: 4px;
   text-align: left;
-  margin-top: 100px;
-  margin-bottom: 200px;
-  margin-right: 300px;
-  margin-left: 40%;
+  margin: auto;
+  padding-left: 45%;
+  padding-top: 60px;
 }
 
-input {
+#userInput {
   font-size: 40px;
   padding: 10px;
-  margin-left: 30%;
-  width: 550px;
+  margin-left: 28%;
+  width: 600px;
   text-align: center;
 }
 
 
 #sub {
-border-radius: 6px;
-background-color: black;
-color: white;
-font-size: 20px;
-padding: 20px;
-width: 220px;
-margin-top:100px;
-margin-left: -28%;
-position: absolute;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  margin: 10px auto;
+  margin-left: 31%;
+  width: 550px;
+  height: 50px;
+  text-align: center;
 }
 
 a {
@@ -56,58 +57,76 @@ a {
 }
 
 .basic {
-  font-family: "Montserrat", sans-serif;
-  font-weight: lighter;
-  font-size: 33px;
-  letter-spacing: 1px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-right: 300px;
-  margin-left: 300px;
-  border: 3px black solid;
-  padding: 100px;
+   font-family: "Montserrat", sans-serif;
+   font-weight: lighter;
+   font-size: 30px;
+   letter-spacing: 1px;
+   margin: 100px auto;
+   border: 3px black solid;
+   padding: 70px;
+   max-width: 700px;
 }
 
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
-  font-size: 45px;
-  letter-spacing: 3px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  padding-top: 150px;
-  padding-left: 320px;
-  padding-bottom: 100px;
-  padding-right: 320px;
+  font-size: 55px;
+  letter-spacing: 5px;
+  margin: 20px auto;
+  max-width: 800px;
   text-align: center;
+  padding-top: 60px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 6px;
+  text-align: center;
+  margin: 0px auto;
+  max-width: 1000px;
+  color: DimGrey;
 }
 
 .small {
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 2px;
-  margin: 100px;
-  padding-top: 200px;
-  padding-left: 100px;
-  padding-right: 100px;
+  margin: 20px auto;
+  max-width: 650px;
   text-align: center;
+  color: DimGrey;
+}
+
+.smallBorder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin: 0px auto;
+  margin-top: 100px;
+  max-width: 550px;
+  text-align: center;
+  border: black dotted 3px;
+  padding: 20px;
 }
 
 </style>
-<h1> Welcome to the NFTemple. The Temple where your NFT got another demension.</h1>
-<p class="basic"> With a power of blockchain you can create 3D gallery full of your NFTs. Just with a couple of clicks.</p>
-<p class="basic">If you already have tokens in your ETH wallet scroll down, enter your address and look at it by yourself. And no, we don't need your private key and we don't trade or steal any data.
-In fact we even don't store anything. =) </p>
+<h1> Welcome to NFTemple</h1>
+<h2>the place where your NFTs get another dimension</h2>
 
 <p id="firstP">Enter ETH adress:</p>
 
 <form id="form" action="room.html">
-    <input  type="text" id="userInput" />
-    <input type="submit" id="sub" onclick="myFunction1();" />
+    <input type="text" id="userInput" />
+    <input type="submit" id="sub" value="Enter The Room" onclick="myFunction1();" />
 </form>
 
-<p class="small">  If by any chance you still don't have ETH address with tokens feel free to use any artist's addresses like those guys:</p>
+<p class="smallBorder"> Examples Of NFT Exhibits </p>
+
+<p class="small">Here are some examples of prominent artists' ETH addresses that you can view in the temple right now.</p>
 
 <ul class="examplesList">
     <li>
@@ -130,10 +149,13 @@ In fact we even don't store anything. =) </p>
     </li>
 </ul>
 
+<p class="basic">With the power of blockchain you can create a 3D gallery filled with your NFTs. It only takes a couple of clicks!</p>
+<p class="basic">If you already have tokens in your ETH wallet you can preview its contents in the temple. Simply paste the wallet address in our form (above). And no, we don't need your private key and we don't trade or share any data. In fact we even don't store anything.</p>
 
 
-<p class="basic"> UPCOMING:
-with couple more of clicks it will become an NFTemple token with it's own address on ENS. </p>
+
+
+<p class="basic"> COMING UP:Ability to generate NFTemple tokens with unique addresses on ENS (Ethereum Name Service) so that anyone can share their gallery with other people.</p>
 
 
 
