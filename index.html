@@ -1,57 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>NFTemple</title>
-    <script src = "/components/script.js" type = "text/javascript"/></script>
-</head>
-
+<html>
 <body>
-    <link rel="stylesheet" href="components/style.css">
 
-    <script>
-    </script>
+<style type="text/css" media="screen">
+body {
+  background: linear-gradient(to left, SpringGreen, white, orchid);
+}
+
+#firstP {
+font-family: "Montserrat", sans-serif;
+font-size: 40px;
+letter-spacing: 8px;
+line-height: 60px;
+padding-left: 32%;
+padding-top: 25px;
+}
+
+#secondP {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 3px;
+  padding-left: 36%;
+  padding-top: 125px;
+}
+
+.examplesList {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 4px;
+  padding-left: 45%;
+  padding-top: 50px;
+  line-height: 40px;
+}
+
+#userInput {
+  font-size: 40px;
+  padding: 10px;
+  margin-left: 29%;
+  width: 550px;
+}
 
 
-    <ul id="list">
-            <form class="link">
-                <input type="checkbox" name="music" >IPFS Music:
-                <input type="text" value="music"><br>
-            </form>
+#sub {
+border-radius: 6px;
+background-color: black;
+color: white;
+font-size: 20px;
+padding: 20px;
+width: 220px;
+margin-top:100px;
+margin-left: -28%;
+position: absolute;
+}
 
-            <form class="link">
-                <input type="checkbox" name="sky">IPFS Sky:
-                <input type="text" value="sky"><br>
-            </form>
+a {
+  color: DarkSlateGrey;
+}
+</style>
+<h> Wellcome to the NFTemple. The Temple where your NFT got another demension.</h>
+<p> With a power of blockchain you can create 3d gallery full of your NFTs. Just with couple of clicks.</p>
+<p>If you already have tokens in your ETH wallet scroll down, enter your address and look at it by yourself. And yes we don't need your private key and we don't collect, trade or steal any data.
+In fact we even don't store anything and sorry no coockies for you today. =) </p>
 
-            <form class="link">
-                <input type="checkbox" name="walls">IPFS Walls:
-                <input type="text" value="walls"><br>
-            </form>
+<p id="firstP">Enter ETH adress:</p>
+
+<form id="form" action="room.html">
+    <input  type="text" id="userInput" />
+    <input type="submit" id="sub" onclick="myFunction1();" />
+</form>
+
+<p>  If by any chance you still have no ETH address with tokens feel free to use any artist's addresses like those guys:</p>
+
+<p id="secondP" >Or check out those samples:<p>
+<ul class="examplesList">
+    <li>
+        <a href="room.html" onclick="myFunction2('0xc6b0562605d35ee710138402b878ffe6f2e23807')">Beeple</a>
+    </li>
+    <li>
+        <a href="room.html" onclick="myFunction2('0x795fb0e902f9e0fe87dab5a9dac37ad7c5bede0a')">LilJon</a>
+    </li>
+    <li>
+        <a href="room.html" onclick="myFunction2('0x1a7759dfa6bc62d8a4905e8c7f936e543026ccce')">Random Dude</a>
+    </li>
+    <li>
+        <a href="room.html" onclick="myFunction2('0x267a7ba3432db1f18d52b8776e2ba0e574091c3b')">ernest0</a>
+    </li>
+    <li>
+        <a href="room.html" onclick="myFunction2('0x6b32ae7f5db70749543ce0cd4932abbc501a7f6f')">Mkimbs</a>
+    </li>
+    <li>
+        <a href="room.html" onclick="myFunction2('0xc24f574d6853f6f6a31c19d468a8c1b3f31c0e54')">shilpixels</a>
+    </li>
+</ul>
 
 
-            <form class="link">
-                <input type="checkbox" name="floor">IPFS Floor:
-                <input type="text" value="floor"><br>
-            </form>
 
-            <form class="link">
-                <input type="checkbox" name="item0" >IPFS item:
-                <input type="text" id="item" value="https://gateway.pinata.cloud/ipfs/QmWdxzQNNPvPJtyeMfXGhVgE2B6AhSZWVWWZZboJabE16a"><br>
-            </form>
-
-    </ul>
+</p> UPCOMMING:
+with couple more of clicks it will become an NFTemple token with it's own address on ENS. </p>
 
 
-    <button type="button" onclick="addItem()">+</button>
-    <p>
-        https://gateway.pinata.cloud/ipfs/Qmf4usGZXME1ztKMZPxEGYT9BnzzvngyrSTRmiAYJMRCKj
-    </p>
 
-    <button  type="button" onclick="saveLink()" >Submit</button>
+<script>
+    function myFunction1() {
 
+        var input = document.getElementById("userInput").value;
+        sessionStorage.setItem('input', input);
+
+    }
+    function myFunction2(address) {
+
+        sessionStorage.setItem('input', address);
+        console.log('asd')
+
+    }
+</script>
 
 </body>
 </html>
